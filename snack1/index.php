@@ -3,21 +3,21 @@ Creiamo un array contenente le partite di basket di un’ipotetica tappa del cal
 Olimpia Milano - Cantù | 55-60 -->
 <?php
 $calendario=[
-$tappa1 = [
+'tappa1' => [
     'squadra_casa' => 'Olimpia Milano',
     'squadra_ospite' => 'Cantù',
     'Punti_sq_casa' => '55',
     'Punti_sq_ospite' => '60'
 ],
 
-$tappa2 = [
+'tappa2' => [
     'squadra_casa' => 'Virtus Bologna',
     'squadra_ospite' => 'Venezia',
     'Punti_sq_casa' => '50',
     'Punti_sq_ospite' => '45'
 ],
 
-$tappa3 = [
+'tappa3'=> [
     'squadra_casa' => 'Dinamo Sassari',
     'squadra_ospite' => 'Trento',
     'Punti_sq_casa' => '70',
@@ -40,9 +40,10 @@ $tappa3 = [
 </head>
 <body>
     <h1>Calendario incontri serie A Basket</h1>
+  
     <?php  
     for($i =0; $i < count($calendario) ;$i++){?>
-        <p> <?php echo $tappa[$i]['squadra_casa'] ?></p>
+        <p> <?php echo $calendario[$i][squadra_casa] ?></p>
     <?php } ?>
 </body>
 </html>
