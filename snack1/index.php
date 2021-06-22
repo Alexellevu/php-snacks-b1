@@ -6,22 +6,22 @@ $calendario=[
 'tappa1' => [
     'squadra_casa' => 'Olimpia Milano',
     'squadra_ospite' => 'Cantù',
-    'Punti_sq_casa' => '55',
-    'Punti_sq_ospite' => '60'
+    'punti_sq_casa' => '55',
+    'punti_sq_ospite' => '60'
 ],
 
 'tappa2' => [
     'squadra_casa' => 'Virtus Bologna',
     'squadra_ospite' => 'Venezia',
-    'Punti_sq_casa' => '50',
-    'Punti_sq_ospite' => '45'
+    'punti_sq_casa' => '50',
+    'punti_sq_ospite' => '45'
 ],
 
-'tappa3'=> [
+'tappa3' => [
     'squadra_casa' => 'Dinamo Sassari',
     'squadra_ospite' => 'Trento',
-    'Punti_sq_casa' => '70',
-    'Punti_sq_ospite' => '65'
+    'punti_sq_casa' => '70',
+    'punti_sq_ospite' => '65'
 ]
 
 ];
@@ -38,12 +38,19 @@ $calendario=[
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Calendario incontri serie A Basket</h1>
+    <h1>Calendario incontri serie A di Basket</h1>
   
     <?php  
-    for($i =0; $i < count($calendario) ;$i++){?>
-        <p> <?php echo $calendario[$i][squadra_casa] ?></p>
+ 
+    foreach($calendario as $key => $data){ ?>
+        <h2> <?php echo $key  ?>:</h2>
+        <span> <?php echo $data['squadra_casa'] ?> - </span>
+        <span> <?php echo $data['squadra_ospite'] ?> |</span>
+        <span> <?php echo $data['punti_sq_casa'] ?>-</span>
+        <span> <?php echo $data['punti_sq_ospite'] ?></span>
     <?php } ?>
+   
 </body>
 </html>
