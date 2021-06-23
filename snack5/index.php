@@ -5,9 +5,9 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
 
 $paragrafo = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia tenetur unde deserunt nostrum nulla quam reiciendis alias maiores ipsam nihil repudiandae nesciunt. recusandae consectetur itaque illum voluptates quos Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto omnis distinctio modi aperiam dignissimos. Dicta dolor consequatur alias perferendis itaque. Temporibus animi minima praesentium rerum quibusdam. laboriosam accusantium consectetur! Voluptates.';
 
-var_dump(explode('.',$paragrafo));
+
 $frasi=explode('.',$paragrafo);
-var_dump($frasi);
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,11 @@ var_dump($frasi);
 </head>
 <body>
     <h1>Suddivisione paragrafo</h1>
+    <h3>Paragrafo da suddividere:</h3>
+    <p> <?php echo $paragrafo ?> </p>
+    <h3>Paragrafo suddiviso in base ai punti</h3>
     <?php for($i=0; $i<count($frasi);$i++){ ?>
+    
     <p> <?php echo $frasi[$i] ?> </p>
     <?php } ?>
 </body>
