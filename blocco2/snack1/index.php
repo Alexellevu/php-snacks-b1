@@ -27,6 +27,8 @@ $ads = [
     ],
 
 ];
+
+$number = rand(0, 4);
 ?>
 
 
@@ -44,8 +46,8 @@ $ads = [
     <h1>Spot</h1>
   <?php  foreach($ads as $key => $img){ ?>
 
-
-    <img src="<?php echo $img['image_path'] ?>" alt="">
+    <p><?php $key ?></p>
+    <img src="<?php echo  $img['image_path'] ?>" alt="">
 
     <?php }?>
 </body>
